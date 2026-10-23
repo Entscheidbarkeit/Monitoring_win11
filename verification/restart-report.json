@@ -1,0 +1,29 @@
+{
+    "preserved_id":  "7f1181b2ebb241dc9028006c6cbd103a",
+    "task_running":  true,
+    "run_level":  "Limited",
+    "hostname":  "DESKTOP-MRBO5NM",
+    "restart_preserved_request":  true,
+    "bind":  [
+                 {
+                     "LocalAddress":  "fd7a:115c:a1e0::b4a:3b6c",
+                     "LocalPort":  18080
+                 },
+                 {
+                     "LocalAddress":  "127.0.0.1",
+                     "LocalPort":  18080
+                 },
+                 {
+                     "LocalAddress":  "100.122.59.107",
+                     "LocalPort":  18080
+                 }
+             ],
+    "gpu_status":  "ok",
+    "health":  {
+                   "status":  "ok",
+                   "service":  "llm-monitor",
+                   "ollama_error":  null,
+                   "collector_error":  null
+               },
+    "verified_utc":  "2026-10-23T15:43:07.6690206Z"
+}

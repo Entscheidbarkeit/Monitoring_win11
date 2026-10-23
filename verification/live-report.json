@@ -1,0 +1,447 @@
+{
+  "base_url": "http://100.122.59.107:11434",
+  "checks": [
+    {
+      "case": "native-stream",
+      "record": {
+        "id": "b73cb7cdbc144c53b5cc1ad4f5a629f6",
+        "started": 1792769871.5440712,
+        "finished": 1792769882.2727394,
+        "endpoint": "/api/chat",
+        "model": "qwen3.8-27b-orca:q3_k_m",
+        "response_model": "qwen3.8-27b-orca:q3_k_m",
+        "config_id": "3b16c06048cb78b8cef809847f5d2fea2c18d096d5acc933493143908976d90f",
+        "client": "127.0.0.1",
+        "streaming": 1,
+        "state": "success",
+        "http_status": 200,
+        "finish_reason": "stop",
+        "error": null,
+        "input_tokens": 134,
+        "output_tokens": 69,
+        "total_tokens": 203,
+        "cached_input_tokens": 0,
+        "usage_complete": 1,
+        "duration_ms": 10732.546999992337,
+        "ttft_ms": 8219.676999986405,
+        "load_ms": 7874.2383,
+        "prompt_eval_ms": 337.483,
+        "eval_ms": 2512.957,
+        "engine_tps": 27.457692272490142,
+        "wall_tps": 6.429042425814606,
+        "response_bytes": 10033,
+        "config": {
+          "client_system_sha256": null,
+          "default_system_sha256": "ecd5c396b679168d6f7b9b27a1e16a8fae7b7c4452502e9051a478cb4a6dc955",
+          "defaults": {
+            "num_ctx": 4096,
+            "presence_penalty": 0,
+            "repeat_penalty": 1,
+            "temperature": 0.7,
+            "top_k": 20,
+            "top_p": 0.8
+          },
+          "details": {
+            "families": [
+              "qwen35"
+            ],
+            "family": "qwen35",
+            "format": "gguf",
+            "parameter_size": "27.3B",
+            "parent_model": "orcarouter/qwen3.8-27b-uncensored:q3_K_M",
+            "quantization_level": "Q3_K_M",
+            "runner": "llamacpp"
+          },
+          "has_tools": false,
+          "known_options": {
+            "num_ctx": 4096,
+            "num_predict": 160,
+            "presence_penalty": 0,
+            "repeat_penalty": 1,
+            "seed": 51,
+            "temperature": 0.7,
+            "top_k": 20,
+            "top_p": 0.8
+          },
+          "model": "qwen3.8-27b-orca:q3_k_m",
+          "note": "Known options combine queried model defaults and request overrides; unspecified engine defaults are unknown. No messages or response text stored.",
+          "observed_digest": "ead75be5fe6cadf507ab237ff09e31682c63595029c5147295e94c54247c7a51",
+          "observed_loaded": {
+            "context_length": null,
+            "digest": null,
+            "runner": null,
+            "size_vram": null
+          },
+          "ollama_version": "0.40.6",
+          "reasoning_effort": null,
+          "request_options": {
+            "num_predict": 160,
+            "seed": 51
+          },
+          "template_sha256": "b507b9c2f6ca642bffcd06665ea7c91f235fd32daeefdf875a0f938db05fb315",
+          "think": false
+        }
+      }
+    },
+    {
+      "case": "native-stream",
+      "record": {
+        "id": "f4a1437d97f14531a4039f9760351fc9",
+        "started": 1792769882.891316,
+        "finished": 1792769894.3971734,
+        "endpoint": "/api/chat",
+        "model": "qwen3.8-27b-uncensored:iq3_m",
+        "response_model": "qwen3.8-27b-uncensored:iq3_m",
+        "config_id": "6b652632a6067e175c705c62b208a01ac211325738a047074c8c5e1832e883ae",
+        "client": "127.0.0.1",
+        "streaming": 1,
+        "state": "success",
+        "http_status": 200,
+        "finish_reason": "stop",
+        "error": null,
+        "input_tokens": 134,
+        "output_tokens": 66,
+        "total_tokens": 200,
+        "cached_input_tokens": 0,
+        "usage_complete": 1,
+        "duration_ms": 11515.889300004346,
+        "ttft_ms": 9188.2634999929,
+        "load_ms": 8790.1958,
+        "prompt_eval_ms": 379.497,
+        "eval_ms": 2327.632,
+        "engine_tps": 28.35499769723049,
+        "wall_tps": 5.731211744105172,
+        "response_bytes": 9950,
+        "config": {
+          "client_system_sha256": null,
+          "default_system_sha256": "ecd5c396b679168d6f7b9b27a1e16a8fae7b7c4452502e9051a478cb4a6dc955",
+          "defaults": {
+            "num_ctx": 4096,
+            "repeat_penalty": 1,
+            "temperature": 0.7,
+            "top_k": 20,
+            "top_p": 0.8
+          },
+          "details": {
+            "families": [
+              "qwen35"
+            ],
+            "family": "qwen35",
+            "format": "gguf",
+            "parameter_size": "27.3B",
+            "parent_model": "qwen3.8-27b-uncensored:before-chinese-20261022t172912979z",
+            "quantization_level": "IQ3_M",
+            "runner": "llamacpp"
+          },
+          "has_tools": false,
+          "known_options": {
+            "num_ctx": 4096,
+            "num_predict": 160,
+            "repeat_penalty": 1,
+            "seed": 51,
+            "temperature": 0.7,
+            "top_k": 20,
+            "top_p": 0.8
+          },
+          "model": "qwen3.8-27b-uncensored:iq3_m",
+          "note": "Known options combine queried model defaults and request overrides; unspecified engine defaults are unknown. No messages or response text stored.",
+          "observed_digest": "c568f934faedda3b636c7e5e597b9b4758e6c40121b95dc67b013146c927209b",
+          "observed_loaded": {
+            "context_length": null,
+            "digest": null,
+            "runner": null,
+            "size_vram": null
+          },
+          "ollama_version": "0.40.6",
+          "reasoning_effort": null,
+          "request_options": {
+            "num_predict": 160,
+            "seed": 51
+          },
+          "template_sha256": "c3cf9e34abf4f9e36c2d72165aa9c132d3e2a725b6c2586aaa3a8af9d7a81041",
+          "think": false
+        }
+      }
+    },
+    {
+      "case": "openai-stream",
+      "record": {
+        "id": "81d1c6ab6e6b498dbc45c2e928af8f57",
+        "started": 1792769894.969167,
+        "finished": 1792769905.9934268,
+        "endpoint": "/v1/chat/completions",
+        "model": "qwen3.8-27b-orca:q3_k_m",
+        "response_model": "qwen3.8-27b-orca:q3_k_m",
+        "config_id": "e83e94f03a1093630222094e602b299d9b5f3578c5eac5989d822c7488ad3a5b",
+        "client": "127.0.0.1",
+        "streaming": 1,
+        "state": "success",
+        "http_status": 200,
+        "finish_reason": "stop",
+        "error": null,
+        "input_tokens": 130,
+        "output_tokens": 17,
+        "total_tokens": 147,
+        "cached_input_tokens": null,
+        "usage_complete": 1,
+        "duration_ms": 11024.286999978358,
+        "ttft_ms": 10422.808499977691,
+        "load_ms": null,
+        "prompt_eval_ms": null,
+        "eval_ms": null,
+        "engine_tps": null,
+        "wall_tps": 1.542049839598096,
+        "response_bytes": 4354,
+        "config": {
+          "client_system_sha256": null,
+          "default_system_sha256": "ecd5c396b679168d6f7b9b27a1e16a8fae7b7c4452502e9051a478cb4a6dc955",
+          "defaults": {
+            "num_ctx": 4096,
+            "presence_penalty": 0,
+            "repeat_penalty": 1,
+            "temperature": 0.7,
+            "top_k": 20,
+            "top_p": 0.8
+          },
+          "details": {
+            "families": [
+              "qwen35"
+            ],
+            "family": "qwen35",
+            "format": "gguf",
+            "parameter_size": "27.3B",
+            "parent_model": "orcarouter/qwen3.8-27b-uncensored:q3_K_M",
+            "quantization_level": "Q3_K_M",
+            "runner": "llamacpp"
+          },
+          "has_tools": false,
+          "known_options": {
+            "max_tokens": 128,
+            "num_ctx": 4096,
+            "presence_penalty": 0,
+            "repeat_penalty": 1,
+            "temperature": 0.7,
+            "top_k": 20,
+            "top_p": 0.8
+          },
+          "model": "qwen3.8-27b-orca:q3_k_m",
+          "note": "Known options combine queried model defaults and request overrides; unspecified engine defaults are unknown. No messages or response text stored.",
+          "observed_digest": "ead75be5fe6cadf507ab237ff09e31682c63595029c5147295e94c54247c7a51",
+          "observed_loaded": {
+            "context_length": null,
+            "digest": null,
+            "runner": null,
+            "size_vram": null
+          },
+          "ollama_version": "0.40.6",
+          "reasoning_effort": "none",
+          "request_options": {
+            "max_tokens": 128
+          },
+          "template_sha256": "b507b9c2f6ca642bffcd06665ea7c91f235fd32daeefdf875a0f938db05fb315",
+          "think": null
+        }
+      }
+    },
+    {
+      "case": "client-cancellation",
+      "record": {
+        "id": "a7b6596a66034dbeac2109f97d0d410b",
+        "started": 1792769906.5369964,
+        "finished": 1792769907.1252437,
+        "endpoint": "/api/chat",
+        "model": "qwen3.8-27b-orca:q3_k_m",
+        "response_model": "qwen3.8-27b-orca:q3_k_m",
+        "config_id": "16b735831f3a28384bcfcd9e43d194f22332488af432e386dd8f247b5759dcaf",
+        "client": "127.0.0.1",
+        "streaming": 1,
+        "state": "cancelled",
+        "http_status": 200,
+        "finish_reason": null,
+        "error": null,
+        "input_tokens": null,
+        "output_tokens": null,
+        "total_tokens": null,
+        "cached_input_tokens": null,
+        "usage_complete": 0,
+        "duration_ms": 588.2743000111077,
+        "ttft_ms": 301.62949999794364,
+        "load_ms": null,
+        "prompt_eval_ms": null,
+        "eval_ms": null,
+        "engine_tps": null,
+        "wall_tps": null,
+        "response_bytes": 987,
+        "config": {
+          "client_system_sha256": null,
+          "default_system_sha256": "ecd5c396b679168d6f7b9b27a1e16a8fae7b7c4452502e9051a478cb4a6dc955",
+          "defaults": {
+            "num_ctx": 4096,
+            "presence_penalty": 0,
+            "repeat_penalty": 1,
+            "temperature": 0.7,
+            "top_k": 20,
+            "top_p": 0.8
+          },
+          "details": {
+            "families": [
+              "qwen35"
+            ],
+            "family": "qwen35",
+            "format": "gguf",
+            "parameter_size": "27.3B",
+            "parent_model": "orcarouter/qwen3.8-27b-uncensored:q3_K_M",
+            "quantization_level": "Q3_K_M",
+            "runner": "llamacpp"
+          },
+          "has_tools": false,
+          "known_options": {
+            "num_ctx": 4096,
+            "num_predict": 2048,
+            "presence_penalty": 0,
+            "repeat_penalty": 1,
+            "temperature": 0.7,
+            "top_k": 20,
+            "top_p": 0.8
+          },
+          "model": "qwen3.8-27b-orca:q3_k_m",
+          "note": "Known options combine queried model defaults and request overrides; unspecified engine defaults are unknown. No messages or response text stored.",
+          "observed_digest": "ead75be5fe6cadf507ab237ff09e31682c63595029c5147295e94c54247c7a51",
+          "observed_loaded": {
+            "context_length": null,
+            "digest": null,
+            "runner": null,
+            "size_vram": null
+          },
+          "ollama_version": "0.40.6",
+          "reasoning_effort": null,
+          "request_options": {
+            "num_predict": 2048
+          },
+          "template_sha256": "b507b9c2f6ca642bffcd06665ea7c91f235fd32daeefdf875a0f938db05fb315",
+          "think": false
+        }
+      }
+    },
+    {
+      "case": "upstream-error",
+      "record": {
+        "id": "7f1181b2ebb241dc9028006c6cbd103a",
+        "started": 1792769907.7023194,
+        "finished": 1792769907.7046475,
+        "endpoint": "/api/chat",
+        "model": "monitor-does-not-exist:missing",
+        "response_model": null,
+        "config_id": "77f1b4aa939c0676fe1f7a2a0563a199154ce485a00e1f3c93c12f27915ca79c",
+        "client": "127.0.0.1",
+        "streaming": 0,
+        "state": "error",
+        "http_status": 404,
+        "finish_reason": null,
+        "error": "Upstream HTTP 404",
+        "input_tokens": null,
+        "output_tokens": null,
+        "total_tokens": null,
+        "cached_input_tokens": null,
+        "usage_complete": 0,
+        "duration_ms": 9.204300004057586,
+        "ttft_ms": null,
+        "load_ms": null,
+        "prompt_eval_ms": null,
+        "eval_ms": null,
+        "engine_tps": null,
+        "wall_tps": null,
+        "response_bytes": 60,
+        "config": {
+          "client_system_sha256": null,
+          "defaults": {},
+          "has_tools": false,
+          "known_options": {},
+          "metadata_error": "HTTPStatusError",
+          "model": "monitor-does-not-exist:missing",
+          "note": "Known options combine queried model defaults and request overrides; unspecified engine defaults are unknown. No messages or response text stored.",
+          "observed_digest": null,
+          "observed_loaded": {
+            "context_length": null,
+            "digest": null,
+            "runner": null,
+            "size_vram": null
+          },
+          "ollama_version": "0.40.6",
+          "reasoning_effort": null,
+          "request_options": {},
+          "think": null
+        }
+      }
+    }
+  ],
+  "hostname": "DESKTOP-MRBO5NM",
+  "gpu": {
+    "status": "ok",
+    "devices": [
+      {
+        "index": 0,
+        "uuid": "GPU-13cbee32-b8b8-4ac8-3eb6-98186224c795",
+        "name": "NVIDIA GeForce RTX 5060 Ti",
+        "utilization_percent": 1,
+        "memory_total_bytes": 17103323136,
+        "memory_used_bytes": 801849344,
+        "memory_free_bytes": 16301473792,
+        "memory_percent": 4.69,
+        "temperature_c": 35,
+        "power_watts": 10.406,
+        "errors": {}
+      }
+    ],
+    "error": null
+  },
+  "summary": {
+    "models": [
+      {
+        "model": "qwen3.8-27b-orca:q3_k_m",
+        "requests": 3,
+        "active": 0,
+        "succeeded": 2,
+        "failed": 1,
+        "input_tokens": 264,
+        "output_tokens": 86,
+        "eval_ms": 2512.957,
+        "timed_output_tokens": 69,
+        "avg_ttft_ms": 6314.704999987346,
+        "avg_duration_ms": 7448.369433327268,
+        "engine_tps": 27.457692272490142
+      },
+      {
+        "model": "monitor-does-not-exist:missing",
+        "requests": 1,
+        "active": 0,
+        "succeeded": 0,
+        "failed": 1,
+        "input_tokens": null,
+        "output_tokens": null,
+        "eval_ms": null,
+        "timed_output_tokens": null,
+        "avg_ttft_ms": null,
+        "avg_duration_ms": 9.204300004057586,
+        "engine_tps": null
+      },
+      {
+        "model": "qwen3.8-27b-uncensored:iq3_m",
+        "requests": 1,
+        "active": 0,
+        "succeeded": 1,
+        "failed": 0,
+        "input_tokens": 134,
+        "output_tokens": 66,
+        "eval_ms": 2327.632,
+        "timed_output_tokens": 66,
+        "avg_ttft_ms": 9188.2634999929,
+        "avg_duration_ms": 11515.889300004346,
+        "engine_tps": 28.35499769723049
+      }
+    ]
+  },
+  "history_points": 147,
+  "passed": true,
+  "verified_at": 1792769911.4308252
+}

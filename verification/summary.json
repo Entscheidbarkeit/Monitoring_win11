@@ -1,0 +1,24 @@
+{
+  "status": "deployed-and-verified",
+  "dashboard": "http://100.122.59.107:18080",
+  "api": "http://100.122.59.107:11434",
+  "host": "DESKTOP-MRBO5NM",
+  "unit_and_integration_tests": 15,
+  "live_cases": [
+    "native-stream",
+    "native-stream",
+    "openai-stream",
+    "client-cancellation",
+    "upstream-error"
+  ],
+  "browser_passed": true,
+  "restart_preserved_history": true,
+  "task_run_level": "Limited",
+  "metrics_started_at": "2026-10-23",
+  "screenshots": [
+    "dashboard.png",
+    "request-detail.png",
+    "model-comparison.png",
+    "mobile.png"
+  ]
+}

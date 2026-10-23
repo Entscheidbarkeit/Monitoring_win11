@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "javascript_errors": [],
+  "screenshots": [
+    "dashboard.png",
+    "request-detail.png",
+    "model-comparison.png",
+    "mobile.png"
+  ]
+}

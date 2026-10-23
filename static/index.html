@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>LLM 主机监控</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <script src="/static/app.js" defer></script>
+</head>
+<body>
+<header>
+  <div class="brand"><span class="brand-icon">M</span><div><strong>LLM 主机监控</strong><small id="host">正在连接主机…</small></div></div>
+  <div class="header-right"><span id="health" class="pill">连接中</span><span id="updated">—</span></div>
+</header>
+<main>
+  <div class="intro"><div><p class="eyebrow">HOST & INFERENCE</p><h1>看清每一次推理</h1><p class="muted">系统资源、模型负载与请求表现，放在同一条时间线上。</p></div><div id="version" class="muted"></div></div>
+  <div id="banner" class="banner" hidden></div>
+  <nav aria-label="监控视图"><button class="active" data-tab="overview">系统总览</button><button data-tab="requests">请求记录</button><button data-tab="models">模型对比</button></nav>
+  <section id="overview" class="view">
+    <div class="cards">
+      <article class="card"><span>CPU 使用率</span><strong id="cpu">—</strong><small id="cpu-note">等待采样</small></article>
+      <article class="card"><span>系统内存</span><strong id="ram">—</strong><small id="ram-note">等待采样</small></article>
+      <article class="card"><span>GPU 利用率</span><strong id="gpu">—</strong><small id="gpu-note">等待采样</small></article>
+      <article class="card"><span>显存使用率</span><strong id="vram">—</strong><small id="vram-note">等待采样</small></article>
+    </div>
+    <article class="panel"><div class="panel-head"><div><h2>资源时间线</h2><span class="muted">整体利用率 · %</span></div><div class="range" aria-label="曲线时间范围"><button class="active" data-seconds="3600">1 小时</button><button data-seconds="21600">6 小时</button><button data-seconds="86400">24 小时</button><button data-seconds="604800">7 天</button><button data-seconds="2592000">30 天</button></div></div>
+      <div class="legend"><span class="cpu">CPU</span><span class="ram">内存</span><span class="gpu">GPU</span><span class="vram">显存</span><small id="resolution">实时采样</small></div>
+      <div class="chart-wrap"><canvas id="chart" aria-label="系统资源使用率历史曲线"></canvas><div id="tooltip" hidden></div></div>
+    </article>
+    <div class="two-columns"><article class="panel"><div class="panel-head"><h2>已加载模型</h2><span id="loaded-count" class="muted">—</span></div><div id="loaded" class="empty">等待模型状态</div></article><article class="panel"><div class="panel-head"><h2>GPU 设备</h2><span class="muted">温度 / 功耗</span></div><div id="devices" class="empty">等待显卡状态</div></article></div>
+  </section>
+  <section id="requests" class="view" hidden>
+    <article class="panel"><div class="panel-head"><div><h2>逐请求记录</h2><span class="muted">点击一条记录查看配置与完整统计</span></div><span id="request-total" class="pill">—</span></div>
+      <div class="filters"><label>模型<select id="model-filter"><option value="">全部模型</option></select></label><label>状态<select id="state-filter"><option value="">全部状态</option><option value="running">进行中</option><option value="success">成功</option><option value="error">错误</option><option value="cancelled">已取消</option><option value="interrupted">已中断</option></select></label><label>时间<select id="hours-filter"><option value="1">最近 1 小时</option><option value="24" selected>最近 24 小时</option><option value="168">最近 7 天</option><option value="720">最近 30 天</option></select></label><button id="refresh">刷新</button></div>
+      <div class="table-wrap"><table><thead><tr><th>开始时间</th><th>模型</th><th>状态</th><th>输入 token</th><th>输出 token</th><th>生成 token/s</th><th>首字等待</th><th>总耗时</th></tr></thead><tbody id="request-rows"></tbody></table></div>
+      <div class="table-foot"><span class="muted">— 表示未获得统计；流式请求结束后更新准确 token 数。</span><div><button id="previous">上一页</button><span id="page">1</span><button id="next">下一页</button></div></div>
+    </article>
+  </section>
+  <section id="models" class="view" hidden>
+    <div class="section-heading"><div><h2>模型表现对比</h2><p class="muted">最近 24 小时 · 生成速率按总输出 token / 总生成时间计算</p></div></div>
+    <article class="panel"><div class="table-wrap"><table><thead><tr><th>模型</th><th>请求数</th><th>进行中</th><th>成功 / 异常</th><th>输入 / 输出 token</th><th>生成 token/s</th><th>平均首字等待</th><th>平均总耗时</th></tr></thead><tbody id="summary-rows"></tbody></table></div></article>
+    <p class="muted footnote">生成速率采用 Ollama 原生引擎计时；兼容接口未提供引擎计时时留空。请求详情另列包含加载和等待的端到端速率。首字等待从接收请求算起，包含思考输出。资源指标属于整机，不代表单个请求独占用量。</p>
+  </section>
+  <footer>仅记录请求指标与配置摘要 · 原始资源记录 7 天，分钟汇总与请求记录 30 天</footer>
+</main>
+<dialog id="detail"><div class="dialog-head"><h2>请求详情</h2><button id="close-detail" aria-label="关闭详情">关闭</button></div><div id="detail-summary" class="detail-grid"></div><h3>配置与统计快照</h3><pre id="detail-json"></pre></dialog>
+</body></html>
